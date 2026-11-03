@@ -27,7 +27,7 @@ spec:
         ports:
         - name: liveness-port
           containerPort: 8080
-        readnessProbe:
+        readinessProbe:
           httpGet:
             path: /health
             port: liveness-port
