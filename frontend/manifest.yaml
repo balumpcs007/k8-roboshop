@@ -30,13 +30,13 @@ spec:
           containerPort: 80
         readinessProbe:
           httpGet:
-            path: /health
+            path: /
             port: liveness-port
           failureThreshold: 1
           periodSeconds: 15
         livenessProbe:
           httpGet:
-            path: /health
+            path: /
             port: liveness-port
           failureThreshold: 1
           periodSeconds: 15
