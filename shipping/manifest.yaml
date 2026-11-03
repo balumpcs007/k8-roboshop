@@ -34,6 +34,9 @@ spec:
       - name: shipping
         image: balumpcs007/shipping:v1
         imagePullPolicy: Always
+        envFrom:
+        - configMapRef:
+            name: shipping
         ports:
         - name: liveness-port
           containerPort: 8080
