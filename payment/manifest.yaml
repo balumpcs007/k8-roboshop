@@ -47,13 +47,13 @@ spec:
           containerPort: 8080
         readinessProbe:
           httpGet:
-            path: /
+            path: /health
             port: liveness-port
           failureThreshold: 1
           periodSeconds: 15
         livenessProbe:
           httpGet:
-            path: /
+            path: /health
             port: liveness-port
           failureThreshold: 1
           periodSeconds: 15
