@@ -44,7 +44,7 @@ spec:
             name: payment
         ports:
         - name: liveness-port
-          containerPort: 80
+          containerPort: 8080
         readinessProbe:
           httpGet:
             path: /
@@ -69,5 +69,5 @@ spec:
     tier: frontend
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 80
+      port: 8080
+      targetPort: 8080
