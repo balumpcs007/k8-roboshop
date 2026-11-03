@@ -35,6 +35,9 @@ spec:
       - name: cart
         image: balumpcs007/cart:v1
         imagePullPolicy: Always
+        envFrom:
+        - configMapRef:
+            name: cart
         ports:
         - name: liveness-port
           containerPort: 8080
